@@ -27,6 +27,6 @@
 		<input type="password" id="pass1" name="pass1" />
 		</fieldset>
 		<br/>
-		<button type="submit">Enviar</button>	
+		<button type="button">Enviar</button>	
 </body>
 </html>
