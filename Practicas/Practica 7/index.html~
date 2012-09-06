@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>P&aacute;gina Principal::Pr&aacute;ctica 1</title>
+<style type="text/css">
+h1 {color:black}
+p {color:black}
+</style>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="shortcut icon" type="image/png" href="favicon.png" />
+<meta name="description" content="Free Web tutorials" />
+<meta name="keywords" content="HTML,CSS,XML,JavaScript" />
+<meta charset="UTF-8" />
+</head>
+<body>
+		<header>
+		    <h1>Bienvenido a soluciones para su empresa</h1>
+		    <img src="http://www.cancunsolutions.com/v20/images/diseno-banner.jpg" alt="descripcion"/><br/>
+	  </header>
+	<nav>
+	<a href="mision.html">Misi&oacute;n</a> |
+  	<a href="vision.html">Visi&oacute;n</a> |
+ 	<a href="faq.html">Preguntas Frecuentes</a>
+	</nav>
+<article>
+<section>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto
+odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p></section>
+<section><p>Expetenda tincidunt in sed, ex partem placerat sea, porro commodo ex eam. His putant aeterno interesset at. Usu ea mundi tincidunt, omnium virtute aliquando ius ex. Ea aperiri sententiae duo. Usu nullam dolorum quaestio ei, sit vidit facilisis ea. Per ne impedit iracundia neglegentur. Consetetur neglegentur eum ut, vis animal legimus inimicus id.</p>
+</section>
+</article>
+<aside>
+</aside>
+<footer>
+Copyright 2012
+</footer>
+</body>
+</html>
