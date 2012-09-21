@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Fieldset::Pr&aacute;ctica 5</title>
+	<meta charset="UTF-8" />
+<script language="JavaScript">
+		function validaForm(){
+		if (document.formulario1.nick.value.length==0) 
+			{
+			document.getElementById("nick").style.border="solid 2px red";		
+			document.getElementById("msgnick").innerText="* El Nick es Requerido";
+			}
+		else
+		{
+			document.getElementById("nick").style.border="solid 1px black";	
+			document.getElementById("msgnick").innerText="*";
+		}
+		if(document.formulario1.mail.value.length==0)
+		{
+			document.getElementById("mail").style.border="solid 1px red";		
+			document.getElementById("msgmail").innerText="* El Email es Requerido";
+		}
+		else
+		{
+			document.getElementById("mail").style.border="solid 1px black";	
+			document.getElementById("msgmail").innerText="*";
+		}
+
+		if(document.formulario1.pass.value.length==0)
+		{
+			document.getElementById("pass").style.border="solid 1px red";		
+			document.getElementById("msgcontraseña").innerText="* La Contraseña es Requerida";
+		}
+		else
+		{
+			document.getElementById("pass").style.border="solid 1px black";	
+			document.getElementById("msgcontraseña").innerText="*";
+		}
+		if(document.formulario1.pass1.value.length==0)
+		{
+			document.getElementById("pass1").style.border="solid 1px red";	
+			document.getElementById("msgconfcontra").innerText="* La Contraseña es Requerida";
+		}
+		else
+		{
+			document.getElementById("pass1").style.border="solid 1px black";	
+			document.getElementById("msgconfcontra").innerText="*";
+		}
+		var password1=document.formulario1.pass.value;
+		var password2=document.formulario1.pass1.value;
+		if(password1!=password2)
+		{
+			document.getElementById("pass").style.border="solid 1px red";	
+			document.getElementById("pass1").style.border="solid 1px red";	
+			document.getElementById("msgcontraseña").innerText="Las Contraseñas No Coinciden";
+			document.getElementById("msgconfcontra").innerText="*";
+		}
+		else
+		{
+			if(password1.length!=0)
+			{
+				document.getElementById("pass").style.border="solid 1px black";	
+				document.getElementById("pass1").style.border="solid 1px black";	
+				document.getElementById("msgcontraseña").innerText="*";
+			}
+		}
+
+		return 0;
+		}
+		</script>
+</head>
+<body>
+		<form name="formulario1" id="formulario1">
+		Registro de Usuario:<br/><br/>
+		<fieldset id = "datos">
+		<label for="nick">Nick:</label><br />
+		<input type="text" id="nick" name="nick" required="required"/><span id="msgnick">*</span><br />
+		<label for="mail">Correo:</label><br />
+		<input type="email" id="mail" name="mail" required="required"/><span id="msgmail">*</span><br />
+		<label for="pass">Contraseña:</label><br />
+		<input type="password" id="pass" name="pass" required="required"/><span id="msgcontraseña">*</span><br />
+		<label for="pass1">Confirmar Contraseña:</label><br />
+		<input type="password" id="pass1" name="pass1" required="required" /><span id="msgconfcontra">*</span><br />
+		</fieldset>
+		<button type=submit value="enviar" onclick="validaForm()">Enviar</button>	
+		</form>
+</body>
+</html>
