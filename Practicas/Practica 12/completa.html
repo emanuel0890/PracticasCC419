@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Formulario::Pr&aacute;ctica 6</title>
+	<meta charset="UTF-8" />	
+		<link rel="stylesheet" type="text/css" media="all" href="css/calendar-estilo.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="css/theme.css" title="Aqua" />
+<script type="text/javascript" src="js/calendar.js"></script>
+<script type="text/javascript" src="js/calendar-es.js"></script>
+<script type="text/javascript" src="js/calendar-setup.js"></script>
+		<script language="JavaScript">
+		function validaForm(){
+		
+		var band1=0;
+		if(document.getElementById("h").checked || document.getElementById("m").checked)
+		{
+			document.getElementById("msgsexo").innerText="";
+		}
+		else
+		{
+			document.getElementById("msgsexo").innerText="*Debes seleccionar al menos una opción!!";
+			band1++;
+		}
+		
+		var bandera=0;
+		for(var x=1; x<6; x++)
+		{
+			if(document.getElementById(x).checked)
+			{
+				bandera++;
+			}
+		}
+		if(bandera!=0)
+		{
+			document.getElementById("msgcheck").innerText="";
+		}
+		else
+		{
+			document.getElementById("msgcheck").innerText="*Debes seleccionar al menos una opción!!";
+			band1++;
+		}
+
+		if(document.Formulario2.imagen.value.length==0)
+		{
+			document.getElementById("imagen").style.border="solid 2px red";		
+			document.getElementById("msgimg").innerText="* La Imágen es Requerida";
+			band1++;
+		}
+		else
+		{
+			document.getElementById("imagen").style.border="solid 1px black";	
+			document.getElementById("msgimg").innerText="*";
+		}	
+		if(document.Formulario2.direccion.value.length==0)
+		{
+			document.getElementById("direccion").style.border="solid 2px red";		
+			document.getElementById("msgdir").innerText="* La Dirección es Requerida";
+			band1++;
+		}
+		else
+		{
+			document.getElementById("direccion").style.border="solid 1px black";	
+			document.getElementById("msgdir").innerText="*";
+		}
+		
+		if (document.Formulario2.nombre.value.length==0)
+		{
+			document.getElementById("nombre").style.border="solid 2px red";		
+			document.getElementById("msgnombre").innerText="* El Nombre es Requerido";
+			band1++;
+		}
+		else
+		{
+			document.getElementById("nombre").style.border="solid 1px black";	
+			document.getElementById("msgnombre").innerText="*";
+		}
+		if(document.Formulario2.pass.value.length==0)
+		{
+			document.getElementById("pass").style.border="solid 2px red";		
+			document.getElementById("msgpass").innerText="* El Password es Requerido";
+			band1++;
+		}
+		else
+		{
+			document.getElementById("pass").style.border="solid 1px black";	
+			document.getElementById("msgpass").innerText="*";
+		}
+		
+		if(document.Formulario2.telefono.value.length==0)
+		{
+			document.getElementById("telefono").style.border="solid 2px red";		
+			document.getElementById("msgtel").innerText="* El Teléfono es Requerido";
+			band1++;
+		}
+		else
+		{
+			document.getElementById("telefono").style.border="solid 1px black";	
+			document.getElementById("msgtel").innerText="*";
+		}
+		
+		if (document.Formulario2.fecha.value.length==0)
+		{
+			document.getElementById("fecha").style.border="solid 2px red";		
+			document.getElementById("msgfecha").innerText="* La fecha de nacimiento es requerida";
+			band1++;
+		}
+		else
+		{
+			document.getElementById("fecha").style.border="solid 1px black";	
+			document.getElementById("msgfecha").innerText="*";
+		}
+		if(band1==0)
+		{
+			document.Formulario2.enviar.click();
+		}
+		
+
+		return 0;
+		}
+		
+		</script>
+</head>
+<body>
+		<script type="text/javascript">
+setActiveStyleSheet(this, 'Aqua');
+</script>
+		<form name="Formulario2">
+		
+		<fieldset id="datos">
+		<label for = "usuario">Usuario:</label><br/>
+		<input type="text" id="usuario" name="usuario" value="emanuel" disabled="disabled" /><br/>
+		<label for = "mail">Email:</label><br/>
+		<input type="email" id="mail" name="mail" value="emanuel0890@gmail.com" disabled="disabled" /><br/>
+		</fieldset><br/>
+		<fieldset id="intereses">
+		Selecciona uno o más intereses:<br/>
+		<ol>
+		<li><input type="checkbox" id="1" name="intereses" value="tecnología"/>Tecnolog&iacute;a<br /></li>
+		<li><input type="checkbox" id="2" name="intereses" value="deportes"/>Deportes<br/></li>
+		<li><input type="checkbox" id="3" name="intereses" value="noticias"/>Noticias<br/></li>
+		<li><input type="checkbox" id="4" name="intereses" value="ciencia"/>Ciencia<br/></li>
+		<li><input type="checkbox" id="5" name="intereses" value="cine"/>Cine<br/></li>
+		</ol>
+		<span id="msgcheck">Seleccione al menos una opción</span>
+		</fieldset><br/>
+		<fieldset id="foto">
+		Cambia la imagen de tu perfil:<br/>
+		<input id="imagen" name="imagen" type="file" required="required" accept="image/*" /><span id="msgimg">*</span>
+		</fieldset><br/>
+		<fieldset id="contraseña">
+		<label for="pass">Ingresa tu Password:</label>
+		<input type="password" id="pass" name="pass" required="required"/><span id="msgpass">*</span>
+		</fieldset><br/>
+		<fieldset id="informacion">
+			<label for="nombre">Nombre:</label><br/>
+			<input type="text" id="nombre" name="nombre" required="required"/><span id="msgnombre">*</span><br/>
+			<label for="direccion">Direcci&oacute;n:</label><br/>
+			<input type="text" id="direccion" name="direccion" required="required"/><span id="msgdir">*</span><br/>
+			<label for="telefono">Tel&eacute;fono:</label><br/>
+			<input type="tel" id="telefono" name="telefono" required="required"/><span id="msgtel">*</span><br/>
+
+			<label for="fecha">Fecha de Nacimiento:</label><br/>
+			<input type="text" name="fecha" id="fecha" readonly="readonly" />
+			<img src="media/img.gif" id="selector" alt="calendario" /><span id="msgfecha">*</span><br/>
+			<!-- <input type="date" id="fechanac" name="fechanac" required="required"/><span id="msgfecha">*</span><br/>-->
+			<br />Sexo:<br />
+			<input type="radio" name="sexo" value="masculino" id="h" />Masculino<br/>
+			<input type="radio" name="sexo" value="femenino" id="m" />Femenino<br/>
+			<span id="msgsexo"></span>			
+		</fieldset><br/>
+		
+		
+		<button type="reset">Limpiar</button>
+		<button type="button" onclick="validaForm()">Enviar</button>
+		<button type="submit" name="enviar" id="enviar" style="display: none;"></button>
+		</form>
+		<script type="text/javascript">
+window.onload = function() {
+Calendar.setup({
+inputField: "fecha",
+ifFormat: "%d / %m / %Y",
+button: "selector"
+});
+}
+</script>
+</body>
+</html>

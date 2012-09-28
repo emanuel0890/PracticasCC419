@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Fieldset::Pr&aacute;ctica 5</title>
+	<meta charset="UTF-8" />
+	<script type="text/javascript" src="js/encriptacion.js"></script>
+</head>
+<body>
+		<form name="formulario1" id="formulario1" method="get" action="completa.html">
+		Registro de Usuario:<br/><br/>
+		<fieldset id = "datos">
+		<label for="nick">Nick:</label><br />
+		<input type="text" id="nick" name="nick" required="required"/><span id="msgnick">*</span><br />
+		<label for="mail">Correo:</label><br />
+		<input type="email" id="mail" name="mail" required="required"/><span id="msgmail">*</span><br />
+		<label for="pass">Contraseña:</label><br />
+		<input type="password" id="pass" name="pass" required="required"/><span id="msgcontraseña">*</span><br />
+		<label for="pass1">Confirmar Contraseña:</label><br />
+		<input type="password" id="pass1" name="pass1" required="required" /><span id="msgconfcontra">*</span><br />
+		</fieldset>
+		<button type=button onclick="validaForm()">Registrar</button>
+		<button type="submit" name="enviar" id="enviar" style="display: none;"></button>	
+		<input type="hidden" id="password" name="password" />
+		</form>
+</body>
+</html>
