@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Probando JS para DOM</title>
+	<meta charset="UTF-8" />
+</head>
+<body>
+	<script type="text/javascript">
+		//crear titulo
+		var titulo = document.createElement('h1');
+
+		//texto del elemento
+		var texto = document.createTextNode('Primer Titulo');
+
+		//unir titulo con el texto
+		titulo.appendChild(texto);
+
+		//agregar el titulo a  la página
+		document.body.appendChild(titulo);
+
+		//crear el segundo titulo
+		var titulo2 = document.createElement('h1');
+
+		// crear el texto del segundo titulo
+		var texto2 = document.createTextNode('Otro titulo');
+
+		//agregar el texto al segundo titulo
+		titulo2.appendChild(texto2);
+
+		//Agregar el titulo antes del primero
+		//titulo.inserBefore(titulo2,titulo);
+		//document.body.appendChild(titulo2);
+		var titulos = document.getElementsByTagName('h1');
+		document.body.insertBefore(titulo2,titulos[0]);
+		alert(titulos[0]);
+		
+		
+	</script>
+</body>
+</html>
